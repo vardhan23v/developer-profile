@@ -10,8 +10,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="progress"></div>
+<div class="glow-orb one"></div>
+<div class="glow-orb two"></div>
+<div class="glow-orb three"></div>
 
-<nav>
+<nav id="navbar">
   <div class="container nav-inner">
     <a href="#" class="logo"><span class="logo-mark">SV</span> Sree Vardhan V</a>
     <ul class="nav-links" id="navLinks">
@@ -53,7 +57,7 @@
       </div>
     </div>
 
-    <div class="hero-card">
+    <div class="hero-card reveal" id="heroCard">
       <div class="avatar-wrap">
         <div class="avatar">SV</div>
         <div class="avatar-meta">
@@ -82,7 +86,7 @@
   <!-- ABOUT DETAIL -->
   <section>
     <div class="about-grid">
-      <div class="card">
+      <div class="card reveal">
         <h3><i>👋</i> About Me</h3>
         <p>
           I'm a Generative AI Developer and Full-Stack Engineer focused on production-quality AI products — not demos. My portfolio (<a href="https://vardhan-v-portfilo.vercel.app" target="_blank" style="color:var(--accent);text-decoration:underline">vardhan-v-portfilo.vercel.app</a>) is built around 9 featured apps and 13 more builds, each solving a real problem with a clear tech & AI stack.
@@ -97,7 +101,7 @@
           <li><span class="dot" style="background:#f472b6"></span><div><strong>2026 — 22+ Projects Shipped → Full Portfolio Live</strong><br><span>9 featured AI / ERP / Realtime apps + portfolio with 6 editions</span></div></li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card reveal reveal-delay-1">
         <h3><i>🎯</i> What I Do</h3>
         <div class="mini-grid">
           <div class="mini">
@@ -123,42 +127,42 @@
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2><span>02 — Skills</span> Tech Stack</h2>
       <p>Grouped the way I actually build — from my shared source of truth <code style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;background:var(--surface2);padding:2px 6px;border-radius:6px;border:1px solid var(--border)">src/classic/data/skills.ts</code></p>
     </div>
     <div class="skills-grid">
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>💻</em> Languages</h3>
         <div class="tags">
           <span class="tag accent">JavaScript</span><span class="tag accent">TypeScript</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">CSS</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>🎨</em> Frontend</h3>
         <div class="tags">
           <span class="tag accent">React</span><span class="tag accent">Next.js</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">Framer Motion</span><span class="tag">Zustand</span><span class="tag">React Router</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>🔧</em> Backend</h3>
         <div class="tags">
           <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">Socket.IO</span><span class="tag">JWT / NextAuth</span><span class="tag">Sequelize</span><span class="tag">Zod</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>🗄️</em> Databases</h3>
         <div class="tags">
           <span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Supabase</span><span class="tag">Cloud MySQL</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>✨</em> AI / LLM</h3>
         <div class="tags">
           <span class="tag accent">Muse Spark 1.2</span><span class="tag accent">MCP</span><span class="tag">DeepSeek</span><span class="tag">Kimi</span><span class="tag">Groq</span><span class="tag">Gemini</span><span class="tag">Claude API</span><span class="tag">Prompt Eng.</span><span class="tag">AI Agents</span><span class="tag">Streaming</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <h3><em>☁️</em> Cloud & Tools</h3>
         <div class="tags">
           <span class="tag">Vercel</span><span class="tag">Railway</span><span class="tag">Cloudinary</span><span class="tag">Git & GitHub</span><span class="tag">Postman</span><span class="tag">Monaco</span><span class="tag">Recharts</span><span class="tag">Leaflet</span><span class="tag">PDFKit</span>
@@ -175,13 +179,13 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2><span>03 — Projects</span> Featured Work <span style="font-weight:500;color:var(--muted);font-size:0.85rem">— from vardhan-v-portfilo</span></h2>
       <p>6 of 9 featured builds. Each card shows problem → features → AI/tech → links. See all 22+ on <a href="https://vardhan-v-portfilo.vercel.app" target="_blank" style="color:var(--accent);text-decoration:underline">Live Portfolio</a> & <a href="https://github.com/vardhan23v" target="_blank" style="color:var(--accent);text-decoration:underline">GitHub</a>.</p>
     </div>
     <div class="projects">
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#1a1a2e 0%, #2d1b4e 100%);color:#c4b5fd"><b>🧩</b><small>Extension AI</small></div>
         <div class="proj-body">
           <h3>Extension AI <span style="font-size:0.7rem;background:rgba(124,108,255,0.15);border:1px solid rgba(124,108,255,0.3);padding:2px 7px;border-radius:999px;color:#b8b0ff;vertical-align:middle">Featured</span></h3>
@@ -195,7 +199,7 @@
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#0b2742 0%, #0e3a5a 100%);color:#7dd3fc"><b>🛡️</b><small>AI Code Reviewer</small></div>
         <div class="proj-body">
           <h3>AI Code Reviewer</h3>
@@ -209,7 +213,7 @@
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#0f2e26 0%, #145a3a 100%);color:#6ee7b7"><b>🏏</b><small>HPL Auction</small></div>
         <div class="proj-body">
           <h3>HPL Auction</h3>
@@ -223,7 +227,7 @@
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#2a1a0f 0%, #4a2d12 100%);color:#fdba74"><b>🛰️</b><small>DisasterMind AI</small></div>
         <div class="proj-body">
           <h3>DisasterMind AI</h3>
@@ -237,7 +241,7 @@
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#0c2e3a 0%, #123f4a 100%);color:#67e8f9"><b>🎙️</b><small>Vard AI</small></div>
         <div class="proj-body">
           <h3>Vard AI</h3>
@@ -251,7 +255,7 @@
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-thumb" style="background:linear-gradient(135deg,#1e2a4a 0%, #2a3a6a 100%);color:#93c5fd"><b>🧾</b><small>Apex Retail ERP</small></div>
         <div class="proj-body">
           <h3>Apex Retail ERP</h3>
@@ -274,13 +278,13 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2><span>04 — Contact</span> Let's Connect</h2>
       <p>Internship, freelance, or just feedback — my inbox is open. I usually reply within 24h.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-card">
+        <div class="contact-card reveal">
           <h3>Get in touch</h3>
           <div class="c-item"><i>✉️</i><div><strong>Email</strong><br><span>23vvardhan@gmail.com</span></div></div>
           <div class="c-item"><i>📍</i><div><strong>Location</strong><br><span>Kurnool, Andhra Pradesh, India — Open to remote</span></div></div>
@@ -293,14 +297,14 @@
             <a href="mailto:23vvardhan@gmail.com">Email</a>
           </div>
         </div>
-        <div class="contact-card" style="background:var(--accent-grad);border:none;color:white">
+        <div class="contact-card reveal" style="background:var(--accent-grad);border:none;color:white">
           <h3 style="color:white">⚡ Quick Response</h3>
           <p style="color:rgba(255,255,255,0.88);font-size:0.88rem;line-height:1.6">For the Week 01 evaluation: this page has About Me, Skills, Projects and this Contact section + the bonus form on the right. Form works without a backend (shows success toast).</p>
         </div>
       </div>
 
       <!-- BONUS: CONTACT FORM (required for full marks) -->
-      <form class="form-card" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+      <form class="form-card reveal" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
         <h3>Send me a message ✨</h3>
         <p>Bonus contact form — validation + success message with no backend. You can later wire it to Formspree / Google Forms.</p>
         <div class="form-grid">
@@ -341,21 +345,183 @@
 </footer>
 
 <script>
+// --- buttery core ---
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// menu
 document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+// scroll progress + navbar state (rAF throttled)
+const progress = document.getElementById('progress');
+const navbar = document.getElementById('navbar');
+let ticking = false;
+function onScroll(){
+  const scrolled = window.scrollY;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = max>0 ? (scrolled/max)*100 : 0;
+  if(progress) progress.style.width = pct+'%';
+  if(navbar) navbar.classList.toggle('scrolled', scrolled>12);
+  // active nav
+  const sections = ['about','skills','projects','contact'];
+  let current = '';
+  for(const id of sections){
+    const el = document.getElementById(id);
+    if(el && window.scrollY >= el.offsetTop - 120) current = id;
+  }
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href')==='#'+current);
+  });
+  ticking=false;
+}
+window.addEventListener('scroll',()=>{
+  if(!ticking){ requestAnimationFrame(onScroll); ticking=true; }
+},{passive:true});
+onScroll();
+
+// reveal on scroll (IntersectionObserver)
+if(!prefersReduced && 'IntersectionObserver' in window){
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    // stagger via transitionDelay already via CSS nth, but add tiny random for organic
+    if(el.classList.contains('skill-group') || el.classList.contains('proj')){
+      const idx = Array.from(el.parentNode.children).indexOf(el);
+      el.style.transitionDelay = (idx*0.08)+'s';
+    }
+    obs.observe(el);
+  });
+  // also reveal footer
+  const foot = document.querySelector('footer');
+  if(foot){ foot.classList.add('reveal'); obs.observe(foot); setTimeout(()=>foot.classList.add('in'), 400); }
+} else {
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+
+// magnetic + tilt for heroCard and proj cards
+if(!prefersReduced){
+  const heroCard = document.getElementById('heroCard');
+  if(heroCard){
+    heroCard.addEventListener('mousemove',(e)=>{
+      const r = heroCard.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - 0.5;
+      const y = (e.clientY - r.top)/r.height - 0.5;
+      heroCard.style.transform = `perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`;
+    });
+    heroCard.addEventListener('mouseleave',()=>{ heroCard.style.transform=''; });
+  }
+  document.querySelectorAll('.proj').forEach(card=>{
+    card.addEventListener('mousemove',(e)=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - 0.5;
+      const y = (e.clientY - r.top)/r.height - 0.5;
+      card.style.transform = `perspective(800px) rotateY(${x*5}deg) rotateX(${-y*5}deg) translateY(-8px) scale(1.01)`;
+    });
+    card.addEventListener('mouseleave',()=>{ card.style.transform=''; });
+  });
+  // parallax orbs subtle follow
+  let mx=0,my=0,ox=0,oy=0;
+  window.addEventListener('mousemove',(e)=>{
+    mx = (e.clientX/window.innerWidth -0.5)*2;
+    my = (e.clientY/window.innerHeight-0.5)*2;
+  });
+  function orbParallax(){
+    ox += (mx - ox)*0.04;
+    oy += (my - oy)*0.04;
+    document.querySelectorAll('.glow-orb').forEach((orb,i)=>{
+      const depth = (i+1)*6;
+      orb.style.transform = `translate(${ox*depth}px, ${oy*depth}px)`;
+    });
+    requestAnimationFrame(orbParallax);
+  }
+  orbParallax();
+}
+
+// smooth anchor with offset + easeOut
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    const href=a.getAttribute('href');
+    if(href.length>1){
+      const target=document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+        const start = window.pageYOffset;
+        const dist = top - start;
+        if(prefersReduced){ window.scrollTo(0, top); return; }
+        const dur=700; let t0=null;
+        function step(t){
+          if(!t0) t0=t;
+          const p = Math.min((t-t0)/dur,1);
+          const ease = 1 - Math.pow(1-p,3); // easeOutCubic
+          window.scrollTo(0, start + dist*ease);
+          if(p<1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        history.pushState(null,'',href);
+      }
+    }
+  });
+});
+
+// micro-interaction: stats count-up on reveal
+const stats = document.querySelectorAll('.stat strong');
+let counted=false;
+const statObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting && !counted){
+      counted=true;
+      stats.forEach(el=>{
+        const raw=el.textContent;
+        const num=parseInt(raw.replace(/[^0-9]/g,''))||0;
+        const suffix=raw.replace(/[0-9]/g,'');
+        let cur=0;
+        const steps=28;
+        let i=0;
+        function tick(){
+          i++; cur=Math.round((i/steps)*num);
+          el.textContent=cur+suffix;
+          if(i<steps) requestAnimationFrame(tick);
+          else el.textContent=raw;
+        }
+        if(num) requestAnimationFrame(tick);
+      });
+    }
+  });
+},{threshold:0.5});
+const heroStats=document.querySelector('.hero-stats');
+if(heroStats) statObs.observe(heroStats);
+
+// form
 function handleSubmit(e){
   e.preventDefault();
   const s=document.getElementById('formStatus');
   const name=document.getElementById('name').value.trim();
   const email=document.getElementById('email').value.trim();
   const msg=document.getElementById('message').value.trim();
-  if(!name||!email||!msg){ s.textContent='⚠️ Please fill all required fields.'; s.className='err'; s.style.display='block'; return; }
+  if(!name||!email||!msg){ s.textContent='⚠️ Please fill all required fields.'; s.className='err'; s.style.display='block'; s.animate([{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],{duration:320, easing:'ease-out'}); return; }
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ s.textContent='⚠️ Please enter a valid email address.'; s.className='err'; s.style.display='block'; return; }
   s.textContent='✅ Thank you, '+name+'! Your message has been received. I\'ll reply at '+email+' soon.';
   s.className='ok'; s.style.display='block';
+  s.animate([{opacity:0, transform:'translateY(6px)'},{opacity:1, transform:'translateY(0)'}],{duration:400, easing:'cubic-bezier(0.16,1,0.3,1)'});
+  const btn=e.target.querySelector('button[type="submit"]');
+  const orig=btn.textContent;
+  btn.textContent='Sent ✓'; btn.disabled=true; btn.style.opacity='0.9';
+  setTimeout(()=>{ btn.textContent=orig; btn.disabled=false; btn.style.opacity=''; }, 2000);
   e.target.reset();
 }
+window.handleSubmit = handleSubmit;
 if(window.innerWidth>=980) document.getElementById('portfolioBtn').style.display='inline-flex';
+
+// keyboard: press "/" to focus form name
+window.addEventListener('keydown',(e)=>{
+  if(e.key==='/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)){
+    e.preventDefault(); document.getElementById('name')?.focus();
+  }
+});
 </script>
 </body>
 </html>
