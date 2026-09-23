@@ -31,9 +31,7 @@ body::before{
     linear-gradient(rgba(124,108,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(124,108,255,0.03) 1px, transparent 1px);
   background-size:40px 40px;pointer-events:none;z-index:-1;
-  animation:gridDrift 30s linear infinite;
 }
-@keyframes gridDrift{0%{transform:translateY(0)}100%{transform:translateY(40px)}}
 a{color:inherit;text-decoration:none}
 .container{max-width:1160px;margin:0 auto;padding:0 24px}
 
@@ -127,19 +125,17 @@ nav.scrolled{
   animation:fadeDown 0.8s var(--ease-out) both;
   backdrop-filter:blur(8px);
 }
-.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent2);box-shadow:0 0 8px var(--accent2);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(0.85)}}
+.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent2);box-shadow:0 0 8px var(--accent2)}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes gradientShift{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(14deg)}}
-@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 .kicker{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--accent);letter-spacing:0.06em;margin-bottom:8px;animation:fadeUp 0.7s var(--ease-out) 0.08s both}
 .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.02;letter-spacing:-0.04em;font-weight:800;margin-bottom:12px;animation:fadeUp 0.7s var(--ease-out) 0.14s both}
 .hero h1 span{
   background:var(--accent-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  background-size:200% 100%;animation:shimmer 6s linear infinite;
+  background-size:200% 100%;
 }
 .hero h2{font-size:1.05rem;font-weight:600;color:var(--muted);margin-bottom:14px;animation:fadeUp 0.7s var(--ease-out) 0.2s both}
 .hero-desc{color:var(--muted);font-size:1rem;max-width:600px;margin-bottom:22px;line-height:1.7;animation:fadeUp 0.7s var(--ease-out) 0.26s both}
@@ -307,7 +303,7 @@ section{padding:56px 0;position:relative}
 .link-btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
 .link-btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,0.15)}
 .link-btn.primary:hover{background:white;box-shadow:0 8px 20px rgba(255,255,255,0.15)}
-.proj-live-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;margin-right:4px;box-shadow:0 0 6px #22c55e;animation:pulse 2s infinite}
+.proj-live-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;margin-right:4px;box-shadow:0 0 6px #22c55e}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:20px}
@@ -464,7 +460,7 @@ body{transition:background-color 0.45s var(--ease-smooth), color 0.45s var(--eas
 .bar-fill::after{
   content:'';position:absolute;inset:0;border-radius:999px;
   background:linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%);
-  background-size:200% 100%;animation:shimmer 2.4s linear infinite;
+  background-size:200% 100%;
 }
 .bars-in .bar-fill{width:var(--w)}
 .bar-row:nth-child(2) .bar-fill{transition-delay:0.1s}
@@ -475,15 +471,6 @@ body{transition:background-color 0.45s var(--ease-smooth), color 0.45s var(--eas
   .bar-fill{transition:none}
   .bars-in .bar-fill{width:var(--w)}
 }
-
-/* TYPING EFFECT */
-.typed{color:var(--accent);font-weight:700}
-.caret{
-  display:inline-block;width:2px;height:1em;margin-left:2px;
-  background:var(--accent);vertical-align:-0.12em;border-radius:2px;
-  animation:caretBlink 0.9s steps(1) infinite;
-}
-@keyframes caretBlink{0%,55%{opacity:1}56%,100%{opacity:0}}
 
 /* TECH MARQUEE — infinite CSS scroll, pauses on hover */
 .marquee{

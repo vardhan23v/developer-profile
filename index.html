@@ -43,7 +43,7 @@
     <div>
       <div class="kicker">Generative AI Developer & Full-Stack Developer</div>
       <h1>Hi, I'm <span>Sree Vardhan V</span>.</h1>
-      <h2>I build <span class="typed" id="typed">with AI.</span><span class="caret" aria-hidden="true"></span></h2>
+      <h2>I build with AI. I ship with code.</h2>
       <p class="hero-desc">
         B.Tech CSE @ NMAM Institute of Technology (NITTE), Kurnool, AP. I craft AI-powered web apps, developer tools and full-stack products — from real-time auction engines to voice-first AI assistants. Currently building at <strong style="color:var(--text)">OxCode</strong> & <strong style="color:var(--text)">FlyRank AI</strong>.
       </p>
@@ -218,7 +218,7 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-head reveal">
-      <h2><span>03 — Projects</span> Featured Work <span style="font-weight:500;color:var(--muted);font-size:0.85rem">— from vardhan-v-portfilo</span></h2>
+      <h2><span>03 — Projects</span> Featured Work</h2>
       <p>6 of 9 featured builds. Filter by what you care about — each card shows problem → features → AI/tech → links. See all 22+ on <a href="https://vardhan-v-portfilo.vercel.app" target="_blank" style="color:var(--accent);text-decoration:underline">Live Portfolio</a> & <a href="https://github.com/vardhan23v" target="_blank" style="color:var(--accent);text-decoration:underline">GitHub</a>.</p>
     </div>
     <!-- WEEK 02: project filters -->
@@ -566,25 +566,6 @@ if(profCard){
     });
   },{threshold:0.35});
   barObs.observe(profCard);
-}
-
-// Week 02: typing effect — rotating roles in hero
-const typedEl = document.getElementById('typed');
-if(typedEl && !prefersReduced){
-  const words = ['with AI.','full-stack apps.','developer tools.','realtime systems.','and ship fast.'];
-  let wi=0, ci=words[0].length, deleting=false;
-  (function type(){
-    const word = words[wi];
-    if(!deleting){
-      ci++;
-      if(ci>=word.length){ ci=word.length; deleting=true; typedEl.textContent=word; setTimeout(type,1800); return; }
-    } else {
-      ci--;
-      if(ci<=0){ ci=0; deleting=false; wi=(wi+1)%words.length; }
-    }
-    typedEl.textContent = word.slice(0,ci);
-    setTimeout(type, deleting?38:72);
-  })();
 }
 
 // Week 02: project filters

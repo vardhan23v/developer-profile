@@ -17,7 +17,7 @@ Week 02 — transformed the Week 01 Developer Profile into a visually appealing,
 - ⭐ **Bonus:** hover effects, smooth spring/ease transitions, responsive hamburger nav bar
 - 🌗 **Bonus:** Light/Dark theme toggle (CSS variables, persisted, no flash on reload)
 - 📊 **Bonus:** Animated skill proficiency bars triggered on scroll
-- ⌨️ **Bonus:** Typing effect in hero + infinite tech marquee (pauses on hover)
+- ⌨️ **Bonus:** Infinite tech marquee (pauses on hover)
 - 🗂 **Bonus:** Project filter chips (AI / Full-Stack / Realtime) with animated transitions
 - ✨ **Bonus:** Spotlight cursor-glow on project cards, copy-email button, back-to-top, custom scrollbar
 
