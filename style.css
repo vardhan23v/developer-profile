@@ -389,3 +389,89 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .hero-stats{gap:18px}
   .hero-card{padding:20px}
 }
+
+/* ============ WEEK 02 ADDITIONS ============ */
+
+/* THEME TOGGLE BUTTON */
+.theme-btn{
+  width:38px;height:38px;border-radius:12px;
+  background:var(--surface2);border:1px solid var(--border);
+  font-size:1rem;cursor:pointer;display:grid;place-items:center;
+  transition:transform 0.3s var(--ease-spring), border-color 0.25s, box-shadow 0.3s, background 0.3s;
+}
+.theme-btn:hover{transform:translateY(-2px) rotate(-8deg);border-color:rgba(124,108,255,0.4);box-shadow:0 8px 18px rgba(124,108,255,0.15)}
+.theme-btn:active{transform:scale(0.92)}
+
+/* LIGHT THEME — CSS custom property overrides */
+html[data-theme="light"]{
+  --bg:#f4f4f9;
+  --surface:#ffffff;
+  --surface2:#efeff6;
+  --border:#ddddea;
+  --text:#16161f;
+  --muted:#55556c;
+  --muted2:#8a8aa2;
+  --accent:#5a48e8;
+  --accent2:#0e9a91;
+}
+html[data-theme="light"] body::before{
+  background:
+    linear-gradient(rgba(90,72,232,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,72,232,0.05) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+html[data-theme="light"] nav{
+  background:rgba(244,244,249,0.75);
+  border-bottom-color:rgba(221,221,234,0.8);
+}
+html[data-theme="light"] nav.scrolled{
+  background:rgba(244,244,249,0.9);
+  box-shadow:0 8px 32px rgba(90,72,232,0.08), 0 1px 0 rgba(90,72,232,0.1) inset;
+}
+html[data-theme="light"] .nav-links.open{background:rgba(244,244,249,0.97)}
+html[data-theme="light"] .glow-orb{opacity:0.2}
+html[data-theme="light"] .field input:hover,
+html[data-theme="light"] .field textarea:hover{background:#e9e9f3}
+html[data-theme="light"] .link-btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+html[data-theme="light"] .link-btn.primary:hover{background:#2a2a3a;box-shadow:0 8px 20px rgba(0,0,0,0.18)}
+html[data-theme="light"] .card,
+html[data-theme="light"] .contact-card,
+html[data-theme="light"] .form-card,
+html[data-theme="light"] .skill-group,
+html[data-theme="light"] .proj{box-shadow:0 2px 10px rgba(30,30,60,0.05)}
+/* smooth theme fade on the base elements */
+body{transition:background-color 0.45s var(--ease-smooth), color 0.45s var(--ease-smooth)}
+
+/* PROFICIENCY BARS — box model (margin/padding/border) + animated width transition */
+.bars{display:grid;gap:16px;margin-top:14px}
+.bar-label{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:0.84rem;font-weight:600;margin-bottom:7px;
+}
+.bar-pct{font-family:'JetBrains Mono',monospace;font-size:0.74rem;color:var(--accent);font-weight:700}
+.bar{
+  height:10px;border-radius:999px;padding:2px; /* padding shows the box model: track wraps the fill */
+  background:var(--surface2);border:1px solid var(--border);
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%;width:0;border-radius:999px;
+  background:var(--accent-grad);
+  box-shadow:0 0 10px rgba(124,108,255,0.45);
+  transition:width 1.3s var(--ease-out);
+  position:relative;
+}
+.bar-fill::after{
+  content:'';position:absolute;inset:0;border-radius:999px;
+  background:linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%);
+  background-size:200% 100%;animation:shimmer 2.4s linear infinite;
+}
+.bars-in .bar-fill{width:var(--w)}
+.bar-row:nth-child(2) .bar-fill{transition-delay:0.1s}
+.bar-row:nth-child(3) .bar-fill{transition-delay:0.2s}
+.bar-row:nth-child(4) .bar-fill{transition-delay:0.3s}
+.bar-row:nth-child(5) .bar-fill{transition-delay:0.4s}
+@media (prefers-reduced-motion: reduce){
+  .bar-fill{transition:none}
+  .bars-in .bar-fill{width:var(--w)}
+}
