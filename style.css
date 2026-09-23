@@ -475,3 +475,93 @@ body{transition:background-color 0.45s var(--ease-smooth), color 0.45s var(--eas
   .bar-fill{transition:none}
   .bars-in .bar-fill{width:var(--w)}
 }
+
+/* TYPING EFFECT */
+.typed{color:var(--accent);font-weight:700}
+.caret{
+  display:inline-block;width:2px;height:1em;margin-left:2px;
+  background:var(--accent);vertical-align:-0.12em;border-radius:2px;
+  animation:caretBlink 0.9s steps(1) infinite;
+}
+@keyframes caretBlink{0%,55%{opacity:1}56%,100%{opacity:0}}
+
+/* TECH MARQUEE — infinite CSS scroll, pauses on hover */
+.marquee{
+  overflow:hidden;position:relative;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:14px 0;margin-bottom:8px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.marquee-track{
+  display:flex;align-items:center;gap:26px;width:max-content;
+  animation:marquee 30s linear infinite;
+}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{
+  font-family:'JetBrains Mono',monospace;font-size:0.82rem;font-weight:700;
+  color:var(--muted);white-space:nowrap;letter-spacing:0.02em;
+  transition:color 0.25s;
+}
+.marquee-track span:hover{color:var(--accent)}
+.marquee-track i{font-style:normal;color:var(--accent);opacity:0.5;font-size:0.7rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.marquee-track{animation:none}}
+
+/* PROJECT FILTERS */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.chip{
+  padding:8px 16px;border-radius:999px;cursor:pointer;
+  background:var(--surface);border:1px solid var(--border);color:var(--muted);
+  font:inherit;font-size:0.82rem;font-weight:600;
+  transition:all 0.3s var(--ease-out);
+}
+.chip:hover{transform:translateY(-2px);border-color:rgba(124,108,255,0.4);color:var(--text);box-shadow:0 6px 16px rgba(124,108,255,0.12)}
+.chip.active{
+  background:var(--accent-grad);color:#fff;border-color:transparent;
+  box-shadow:0 6px 18px rgba(124,108,255,0.35);
+}
+.proj.hide{display:none}
+
+/* SPOTLIGHT HOVER on project cards */
+.proj{position:relative;overflow:hidden}
+.proj::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(124,108,255,0.12), transparent 65%);
+  opacity:0;transition:opacity 0.35s;
+}
+.proj:hover::before{opacity:1}
+.proj > *{position:relative;z-index:1}
+
+/* COPY EMAIL BUTTON */
+.copy-btn{
+  margin-left:auto;flex-shrink:0;
+  width:32px;height:32px;border-radius:9px;cursor:pointer;
+  background:var(--bg);border:1px solid var(--border);
+  font-size:0.85rem;display:grid;place-items:center;
+  transition:all 0.25s var(--ease-out);
+}
+.copy-btn:hover{transform:scale(1.1);border-color:rgba(124,108,255,0.4);box-shadow:0 4px 12px rgba(124,108,255,0.18)}
+.copy-btn.copied{border-color:rgba(78,205,196,0.5);background:rgba(78,205,196,0.12)}
+
+/* BACK TO TOP */
+.to-top{
+  position:fixed;right:22px;bottom:22px;z-index:90;
+  width:44px;height:44px;border-radius:14px;cursor:pointer;
+  background:var(--accent-grad);color:#fff;border:none;
+  font-size:1.1rem;font-weight:800;
+  box-shadow:0 8px 22px rgba(124,108,255,0.4);
+  opacity:0;transform:translateY(16px) scale(0.9);pointer-events:none;
+  transition:opacity 0.35s var(--ease-out), transform 0.35s var(--ease-spring), box-shadow 0.3s;
+}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(124,108,255,0.5)}
+.to-top:active{transform:scale(0.92)}
+
+/* CUSTOM SCROLLBAR + SELECTION */
+::selection{background:rgba(124,108,255,0.35);color:var(--text)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--surface2);border:2px solid var(--bg);border-radius:999px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+html{scrollbar-width:thin;scrollbar-color:var(--surface2) var(--bg)}
